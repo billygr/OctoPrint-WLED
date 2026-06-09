@@ -432,7 +432,7 @@ def get_config_from_root(root):
     # TODO: find a py2 compatible solution for the configparser deprecation issues
     parser = configparser.RawConfigParser()
     with io.open(setup_cfg, 'rt', encoding="utf-8") as f:
-        parser.readfp(f)
+        parser.read_file(f)
 
     VCS = parser.get("versioneer", "VCS")  # mandatory
 
